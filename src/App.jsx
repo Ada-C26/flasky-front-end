@@ -1,10 +1,11 @@
 import './App.css';
+import DATA from './data';
 import CatList  from './components/CatList';
 
 function App() {
   return (
     <>
-      <CatList />
+      <CatList cats={DATA}/>
     </>
   );
 }
