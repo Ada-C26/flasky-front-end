@@ -1,6 +1,20 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const Cat = ({ name, color, personality, caretaker }) => {
+    // let petCount = 0;
+    const [petCount, setPetCount] = useState(0);
+
+    const petCat = () => {
+      // console.log(`${name} is purring`);
+      // petCount += 1;
+      setPetCount(petCount => petCount + 1);
+    };
+
+    const handleClick = (event) => {  // eslint-disable-line no-unused-vars
+      petCat();
+    };
+
     return (
         <>
 			<li>
@@ -8,7 +22,8 @@ const Cat = ({ name, color, personality, caretaker }) => {
 				<h3>Color: {color}</h3>
         <h3>Personality: {personality}</h3>
         <h3>Caretaker: {caretaker}</h3>
-				<button>Pet</button>
+        <h3># of Pets: {petCount}</h3>
+				<button onClick={handleClick}>Pet</button>
 			</li>
 		</>
     );
