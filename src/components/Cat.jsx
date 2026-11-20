@@ -17,8 +17,8 @@ const Cat = ({ name, color, personality, caretaker }) => {
 
     return (
         <>
-			<li>
-				<h2>Name of Cat: {name}</h2>
+			<li className="cat">
+				<h2>{name}</h2>
 				<h3>Color: {color}</h3>
         <h3>Personality: {personality}</h3>
         <h3>Caretaker: {caretaker}</h3>
